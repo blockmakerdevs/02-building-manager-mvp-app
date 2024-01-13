@@ -14,7 +14,7 @@ EXPOSE $PORT 19001 19002
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH /home/node/.npm-global/bin:$PATH
 RUN npm i --unsafe-perm -g yarn
-RUN yarn global add expo-cli@latest
+RUN npm install expo-cli@latest -g
 
 # switch to 'node' user
 USER node
@@ -33,4 +33,4 @@ COPY --chown=node:node . .
 RUN yarn install || cat /root/.npm/_logs/*-debug.log
 
 
-CMD ["yarn", "run", "web"]
+CMD ["npm", "run", "web"]
