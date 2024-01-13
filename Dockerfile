@@ -26,9 +26,11 @@ WORKDIR /home/node/app
 # install application dependencies
 COPY --chown=node:node ./package.json ./
 COPY --chown=node:node ./yarn.lock ./
-RUN yarn install || cat /root/.npm/_logs/*-debug.log
 
 # copy in our source code
 COPY --chown=node:node . .
 
-CMD ["npm", "run", "web"]
+RUN yarn install || cat /root/.npm/_logs/*-debug.log
+
+
+CMD ["yarn", "run", "web"]

@@ -8189,9 +8189,9 @@ react-native-screens@~3.22.0:
     warn-once "^0.1.0"
 
 react-native-ui-lib@^7.14.3:
-  version "7.14.3"
-  resolved "https://registry.yarnpkg.com/react-native-ui-lib/-/react-native-ui-lib-7.14.3.tgz#04eb7f01aaa4ee65b425bc047a1becc9fa5fa463"
-  integrity sha512-b7Mfik/1fZrQsdc8faKKzzs6pF1xKG1NYcznvztWuYaEfbpADRykv7mcr3WRJ/QWBe5DuGYsQC+VH3cf9NiZZg==
+  version "7.14.4"
+  resolved "https://registry.yarnpkg.com/react-native-ui-lib/-/react-native-ui-lib-7.14.4.tgz#0bf701f7ee5f313ff1282e01d3a9c26004f98c7e"
+  integrity sha512-l9i0KVYLKtApIP+MYy4r2yfv03kKgLTD5yfq+CIg6S7sA+Ofixeg+Hjvoh2l+spLLa8zyyXUjMk2uO/yVq7j6Q==
   dependencies:
     babel-plugin-transform-inline-environment-variables "^0.0.2"
     color "^3.1.0"
