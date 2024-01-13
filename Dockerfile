@@ -1,5 +1,5 @@
 # pull base image
-FROM node:16.0.0-buster-slim
+FROM node:16.20.2-buster-slim
 # set our node environment, either development or production
 # defaults to production, compose overrides this to development on build and run
 ARG NODE_ENV=production
@@ -13,7 +13,10 @@ EXPOSE $PORT 19001 19002
 # install global packages
 ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH /home/node/.npm-global/bin:$PATH
-RUN npm i --unsafe-perm -g npm@latest expo-cli@latest yarn
+RUN npm i --unsafe-perm -g yarn
+RUN yarn global add expo-cli@latest
+RUN yarn global add expo-cli@latest
+
 
 # install dependencies first, in a different location for easier app bind mounting for local development
 # due to default /opt permissions we have to create the dir with root and change perms
