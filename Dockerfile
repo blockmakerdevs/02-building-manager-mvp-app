@@ -22,7 +22,7 @@ RUN mkdir /opt/react_native_app && chown node:node /opt/react_native_app
 WORKDIR /opt/react_native_app
 ENV PATH /opt/react_native_app/.bin:$PATH
 USER node
-COPY ./react_native_app/package.json ./react_native_app/package-lock.json ./
+COPY ./package.json ./package-lock.json ./
 RUN npm install
 
 # copy in our source code last, as it changes the most
