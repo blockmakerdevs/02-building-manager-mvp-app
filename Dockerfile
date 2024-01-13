@@ -24,7 +24,7 @@ ENV PATH /opt/react_native_app/.bin:$PATH
 USER node
 COPY ./package.json ./
 COPY ./yarn.lock ./
-RUN yarn install
+RUN yarn install || cat /root/.npm/_logs/*-debug.log
 
 # copy in our source code last, as it changes the most
 WORKDIR /opt/react_native_app/
